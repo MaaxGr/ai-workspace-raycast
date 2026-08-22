@@ -1,0 +1,15 @@
+---
+description: Rules for working with our REST API
+alwaysApply: false
+---
+
+# API
+
+The current OpenAPI specification is available at:
+http://localhost:3001/api/docs-json
+
+When implementing or changing API integrations:
+
+- Fetch the OpenAPI specification first.
+- Treat it as the source of truth.
+- Do not invent endpoints, parameters, or DTO fields.

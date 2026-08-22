@@ -1,0 +1,79 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "ai-workspace-raycast",
+  "title": "ai-workspace-raycast",
+  "description": "Bedienung vom AI Workspace",
+  "icon": "icon.png",
+  "author": "maaxgr",
+  "platforms": [
+    "Windows",
+    "macOS"
+  ],
+  "categories": [
+    "Productivity"
+  ],
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "create-task",
+      "title": "Create Todo",
+      "subtitle": "",
+      "description": "Creates a new todo",
+      "mode": "view"
+    },
+    {
+      "name": "update-companion-todo",
+      "title": "Update Companion Todo",
+      "subtitle": "",
+      "description": "Updates the active companion todo",
+      "mode": "view"
+    },
+    {
+      "name": "switch-context",
+      "title": "Switch Context",
+      "subtitle": "",
+      "description": "Toggles workspace context between Work and Private",
+      "mode": "no-view"
+    }
+  ],
+  "preferences": [
+    {
+      "name": "apiBaseUrl",
+      "type": "textfield",
+      "required": true,
+      "title": "API Base URL",
+      "description": "Base URL of the AI Workspace API",
+      "placeholder": "http://localhost:3001",
+      "default": "http://localhost:3001"
+    },
+    {
+      "name": "apiToken",
+      "type": "password",
+      "required": true,
+      "title": "API Token",
+      "description": "Token used to authenticate AI Workspace API requests",
+      "placeholder": "Enter your API token"
+    }
+  ],
+  "tools": [],
+  "dependencies": {
+    "@raycast/api": "^1.104.20",
+    "@raycast/utils": "^2.2.7"
+  },
+  "devDependencies": {
+    "@raycast/eslint-config": "^2.2.0",
+    "@types/node": "22.19.17",
+    "@types/react": "19.0.10",
+    "eslint": "^10.5.0",
+    "prettier": "^3.8.5",
+    "typescript": "^6.0.3"
+  },
+  "scripts": {
+    "build": "ray build",
+    "dev": "ray develop",
+    "fix-lint": "ray lint --fix",
+    "lint": "ray lint",
+    "prepublishOnly": "echo \"\\n\\nIt seems like you are trying to publish the Raycast extension to npm.\\n\\nIf you did intend to publish it to npm, remove the \\`prepublishOnly\\` script and rerun \\`npm publish\\` again.\\nIf you wanted to publish it to the Raycast Store instead, use \\`npm run publish\\` instead.\\n\\n\" && exit 1",
+    "publish": "npx @raycast/api@latest publish"
+  }
+}
